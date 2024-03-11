@@ -1,6 +1,5 @@
 package com.solitudeworks.weeabu.mappers;
 
-import com.solitudeworks.weeabu.dtos.UserDto;
 import com.solitudeworks.weeabu.models.UserModel;
 import com.solitudeworks.weeabu.views.UserView;
 
