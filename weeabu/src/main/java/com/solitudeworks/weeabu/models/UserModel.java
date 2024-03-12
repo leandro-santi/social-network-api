@@ -6,6 +6,7 @@ import java.util.List;
 
 @Data
 public class UserModel {
+
     private int id;
     private String username;
     private String about;

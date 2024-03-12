@@ -28,4 +28,13 @@ public class UserService {
         return userModels.stream().map(userViewMapper::map).collect(Collectors.toList());
     }
 
+    public UserView searchUser(int id) {
+        for(UserModel user : userModels){
+            if(user.getId() == id){
+                return userViewMapper.map(user);
+            }
+        }
+        return null;
+    }
+
 }

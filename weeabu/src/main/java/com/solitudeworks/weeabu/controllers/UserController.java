@@ -21,11 +21,16 @@ public class UserController {
         return userService.listUsers();
     }
 
+    @GetMapping("/{id}")
+    private UserView searchUser(@PathVariable int id) {
+        return userService.searchUser(id);
+    }
+
     @PostMapping
     private ResponseEntity<UserView> registerUser(@RequestBody @Valid UserDto userDto,
                                                   UriComponentsBuilder uriComponentsBuilder) {
         var user = userService.registerUser(userDto);
-        var uri = uriComponentsBuilder.path("/topic/${topicView.id}").build().toUri();
+        var uri = uriComponentsBuilder.path("/users/" + user.id()).build().toUri();
         return ResponseEntity.created(uri).body(user);
 
     }
