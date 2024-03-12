@@ -14,6 +14,7 @@ public class UserModel {
     private String password;
     private int coins;
     private List<PostModel> posts;
+    private UserFeatures features;
 
     public UserModel(int id, String username, String about, String email, String password, int coins, List<PostModel> posts) {
         this.id = id;
@@ -23,6 +24,14 @@ public class UserModel {
         this.password = password;
         this.coins = coins;
         this.posts = posts;
+        this.features = new UserFeatures(
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+        );
     }
 
 }

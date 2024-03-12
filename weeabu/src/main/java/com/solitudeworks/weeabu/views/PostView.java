@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public record PostView(
         int id,
-        String username,
+        String author,
         String text,
         LocalDateTime date
 ) {
