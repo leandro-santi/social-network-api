@@ -21,7 +21,6 @@ public class UserService {
         var user = userDtoMapper.map(userDto);
         user.setId(userModels.size() + 1);
         userModels.add(user);
-        System.out.println(userModels.size());
         return userViewMapper.map(user);
     }
 
